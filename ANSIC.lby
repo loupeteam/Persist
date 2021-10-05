@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.3.8.58 SP?>
+<Library Version="0.00.6" xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File>VersionHistory.txt</File>
+    <File Description="Exported data types">Persist.typ</File>
+    <File Description="Exported constants">Persist.var</File>
+    <File Description="Exported functions and function blocks">Persist.fun</File>
+    <File Description="Copy values from persistent memory to working memory">PersistFn_Init.c</File>
+    <File Description="Copy values from working memory to persistent memory">PersistFn_Cyclic.c</File>
+    <File Description="Internal function to determine memory addresses">persistInternalMapMemory.c</File>
+    <File Description="Internal: Backup to persistent memory">persistInternalBackup.c</File>
+    <File Description="Internal: Restore from persistent memory">persistInternalRestore.c</File>
+  </Files>
+  <Dependencies>
+    <Dependency ObjectName="sys_lib" />
+  </Dependencies>
+</Library>
