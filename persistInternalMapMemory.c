@@ -64,14 +64,15 @@ unsigned short persistInternalMapMemory(struct Persistence_typ* Persistence)
 	
 			// Check for room
 		
-			if( (CurrentSize + Persistence->Internal.WorkingVariableInfo[i].sizeofWorkingVariable) <= Persistence->IN.sizeofPersistentVariable ){
+			if( (CurrentSize + Persistence->Internal.WorkingVariableInfo[i].sizeofWorkingVariable + sizeof(Persistence_Var_Metadata)) <= Persistence->IN.sizeofPersistentVariable ){
 		
 				// Fits
 		
-				Persistence->Internal.WorkingVariableInfo[i].pPersistentMemory=	CurrentReadAddress;
+				Persistence->Internal.WorkingVariableInfo[i].pMetadata=	CurrentReadAddress;
+				Persistence->Internal.WorkingVariableInfo[i].pPersistentMemory=	CurrentReadAddress+ sizeof(Persistence_Var_Metadata);
 				
-				CurrentSize += Persistence->Internal.WorkingVariableInfo[i].sizeofWorkingVariable;
-				CurrentReadAddress += Persistence->Internal.WorkingVariableInfo[i].sizeofWorkingVariable;				
+				CurrentSize += Persistence->Internal.WorkingVariableInfo[i].sizeofWorkingVariable + sizeof(Persistence_Var_Metadata);
+				CurrentReadAddress += Persistence->Internal.WorkingVariableInfo[i].sizeofWorkingVariable + sizeof(Persistence_Var_Metadata);				
 
 			} // fits
 		
@@ -80,7 +81,7 @@ unsigned short persistInternalMapMemory(struct Persistence_typ* Persistence)
 				// Doesn't fit
 				
 				// Keep counting so you know the total memory required for all variables
-				CurrentSize += Persistence->Internal.WorkingVariableInfo[i].sizeofWorkingVariable;
+				CurrentSize += Persistence->Internal.WorkingVariableInfo[i].sizeofWorkingVariable + sizeof(Persistence_Var_Metadata);
 				
 				Persistence->OUT.STAT.Error= 	1;
 				Persistence->OUT.STAT.ErrorID= 	PERSIST_ERR_OUTOFMEMORY;

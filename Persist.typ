@@ -17,7 +17,11 @@ TYPE
 		PERSIST_ERR_OUTOFMEMORY,
 		PERSIST_ERR_DATAMOVED_CHANGED
 		);
+	Persistence_Var_Metadata : 	STRUCT 
+		lastWrite : DATE_AND_TIME;
+	END_STRUCT;
 	Persistence_Int_VarInfo_typ : 	STRUCT 
+		pMetadata : UDINT;
 		pWorkingVariable : UDINT;
 		sizeofWorkingVariable : UDINT;
 		pPersistentMemory : UDINT;
