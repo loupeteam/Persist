@@ -18,10 +18,13 @@ TYPE
 		PERSIST_ERR_DATAMOVED_CHANGED
 		);
 	Persistence_Var_Metadata : 	STRUCT 
-		lastWrite : DATE_AND_TIME;
+		workingVariable : STRING[80];
+		variableSize : UDINT;
+		lastFileBackupTime : DT;
+		dataChanged : BOOL;
 	END_STRUCT;
 	Persistence_Int_VarInfo_typ : 	STRUCT 
-		pMetadata : UDINT;
+		pMetadata : REFERENCE TO Persistence_Var_Metadata;
 		pWorkingVariable : UDINT;
 		sizeofWorkingVariable : UDINT;
 		pPersistentMemory : UDINT;
