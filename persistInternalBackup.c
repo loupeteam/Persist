@@ -77,7 +77,7 @@ unsigned short persistInternalBackup(struct Persistence_typ* Persistence)
 					memcpy(	(void*)Persistence->Internal.WorkingVariableInfo[i].pPersistentMemory, 
 						(void*)Persistence->Internal.WorkingVariableInfo[i].pWorkingVariable, 
 						Persistence->Internal.WorkingVariableInfo[i].sizeofWorkingVariable);
-						Persistence->Internal.WorkingVariableInfo[i].pMetaData->dataChanged = 1;
+						Persistence->Internal.WorkingVariableInfo[i].pMetadata->dataChanged = 1;
 				} // Valid variable
 				
 			} // Loop through variables
