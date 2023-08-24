@@ -69,6 +69,7 @@ unsigned short persistInternalMapMemory(struct Persistence_typ* Persistence)
 				// Fits
 		
 				Persistence->Internal.WorkingVariableInfo[i].pMetadata=	CurrentReadAddress;
+				Persistence->Internal.WorkingVariableInfo[i].pMetadata->variableSize= Persistence->Internal.WorkingVariableInfo[i].sizeofWorkingVariable;
 				Persistence->Internal.WorkingVariableInfo[i].pPersistentMemory=	CurrentReadAddress+ sizeof(Persistence_Var_Metadata);
 				
 				CurrentSize += Persistence->Internal.WorkingVariableInfo[i].sizeofWorkingVariable + sizeof(Persistence_Var_Metadata);
