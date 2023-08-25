@@ -20,7 +20,7 @@ TYPE
 	Persistence_Var_Metadata : 	STRUCT 
 		workingVariable : STRING[80];
 		variableSize : UDINT;
-		lastFileBackupTime : DT;
+		lastFileBackupTime : DATE_AND_TIME;
 		dataChanged : BOOL;
 	END_STRUCT;
 	Persistence_Int_VarInfo_typ : 	STRUCT 
