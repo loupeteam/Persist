@@ -17,7 +17,14 @@ TYPE
 		PERSIST_ERR_OUTOFMEMORY,
 		PERSIST_ERR_DATAMOVED_CHANGED
 		);
+	Persistence_Var_Metadata : 	STRUCT 
+		workingVariable : STRING[80];
+		variableSize : UDINT;
+		lastFileBackupTime : DATE_AND_TIME;
+		dataChanged : BOOL;
+	END_STRUCT;
 	Persistence_Int_VarInfo_typ : 	STRUCT 
+		pMetadata : REFERENCE TO Persistence_Var_Metadata;
 		pWorkingVariable : UDINT;
 		sizeofWorkingVariable : UDINT;
 		pPersistentMemory : UDINT;

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version=4.3.8.58 SP?>
-<Library Version="0.00.7" xmlns="http://br-automation.co.at/AS/Library">
+<?AutomationStudio FileVersion="4.9"?>
+<Library Version="0.00.7" SubType="ANSIC" xmlns="http://br-automation.co.at/AS/Library">
   <Files>
     <File>VersionHistory.txt</File>
     <File Description="Exported data types">Persist.typ</File>
@@ -14,5 +14,6 @@
   </Files>
   <Dependencies>
     <Dependency ObjectName="sys_lib" />
+    <Dependency ObjectName="astime" />
   </Dependencies>
 </Library>

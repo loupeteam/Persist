@@ -57,7 +57,11 @@ unsigned short persistInternalBackup(struct Persistence_typ* Persistence)
 	
 	
 	USINT i;
+	DTGetTime_typ getTime;
 	
+	getTime.enable = 0;
+	DTGetTime(&getTime);
+
 	if( dataValid ){
 	
 		for( i = 0; i <= PERSIST_MAI_VARLIST; i++ ){
@@ -65,18 +69,21 @@ unsigned short persistInternalBackup(struct Persistence_typ* Persistence)
 			if( 	(Persistence->Internal.WorkingVariableInfo[i].pPersistentMemory != 0)
 				&&	(Persistence->Internal.WorkingVariableInfo[i].pWorkingVariable != 0)
 				&&	(Persistence->Internal.WorkingVariableInfo[i].sizeofWorkingVariable != 0)
-			){
+				&&  (memcmp((void*)Persistence->Internal.WorkingVariableInfo[i].pPersistentMemory, 
+						(void*)Persistence->Internal.WorkingVariableInfo[i].pWorkingVariable, 
+						Persistence->Internal.WorkingVariableInfo[i].sizeofWorkingVariable) != 0)
+				){
+				
+					memcpy(	(void*)Persistence->Internal.WorkingVariableInfo[i].pPersistentMemory, 
+						(void*)Persistence->Internal.WorkingVariableInfo[i].pWorkingVariable, 
+						Persistence->Internal.WorkingVariableInfo[i].sizeofWorkingVariable);
+						Persistence->Internal.WorkingVariableInfo[i].pMetadata->dataChanged = 1;
+				} // Valid variable
+				
+			} // Loop through variables
 			
-				memcpy(	(void*)Persistence->Internal.WorkingVariableInfo[i].pPersistentMemory, 
-					(void*)Persistence->Internal.WorkingVariableInfo[i].pWorkingVariable, 
-					Persistence->Internal.WorkingVariableInfo[i].sizeofWorkingVariable);
-			
-			} // Valid variable
-			
-		} // Loop through variables
-		
-	} // if(dataValid)
+		} // if(dataValid)
 
-	return 0;
+		return 0;
 
-} // End Fn
+	} // End Fn
