@@ -66,7 +66,7 @@ unsigned short persistInternalRestore(struct Persistence_typ* Persistence)
 				&&	(Persistence->Internal.WorkingVariableInfo[i].pWorkingVariable != 0)
 				&&	(Persistence->Internal.WorkingVariableInfo[i].sizeofWorkingVariable != 0)
 			){
-				if(Persistence->Internal.WorkingVariableInfo[i].pMetadata->variableSize == Persistence->Internal.WorkingVariableInfo[i].sizeofWorkingVariable
+				if(Persistence->Internal.WorkingVariableInfo[i].pMetadata->variableSize != Persistence->Internal.WorkingVariableInfo[i].sizeofWorkingVariable
 				 &&Persistence->Internal.WorkingVariableInfo[i+1].pMetadata != 0){
 					*(BOOL*)Persistence->IN.pDataValid = 0;
 					return (UINT)PERSIST_ERR_DATAMOVED_CHANGED;
