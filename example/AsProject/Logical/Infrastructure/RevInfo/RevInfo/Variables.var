@@ -1,0 +1,3 @@
+VAR
+	tempString : STRING[160];
+END_VAR
