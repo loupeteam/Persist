@@ -33,7 +33,3 @@ VAR RETAIN
 	gPermMisc : ARRAY[0..9999] OF USINT;
 	gPermLastSavedTime : ARRAY[0..MAI_PERSISTERS] OF DATE_AND_TIME;
 END_VAR
-(*Variables to handle transfers*)
-VAR
-	gTransfer : Transfer_typ;
-END_VAR

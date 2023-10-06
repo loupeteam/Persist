@@ -10,3 +10,7 @@ END_VAR
 VAR
 	gErrorCollector : ErrorCollector_typ := (0);
 END_VAR
+(*Variables to handle transfers*)
+VAR
+	gTransfer : Transfer_typ;
+END_VAR
