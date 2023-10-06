@@ -17,7 +17,7 @@
     <Parameter ID="RemMemDevice" Value="PCI.2.IPLK.SRAM" />
     <Parameter ID="RemMemSize" Value="262000" />
     <Parameter ID="PermanentPvSize" Value="105000" />
-    <Parameter ID="RemanentGlobalPvSize" Value="105000" />
+    <Parameter ID="RemanentGlobalPvSize" Value="120000" />
     <Parameter ID="VolatileGlobalPvSize" Value="6000000" />
     <Parameter ID="ClearNvMemoryAfterShutdownFlushError" Value="0" />
     <Parameter ID="EnableCfRemoteInstall" Value="1" />
