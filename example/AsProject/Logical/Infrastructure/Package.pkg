@@ -6,6 +6,5 @@
     <Object Type="Program" Language="ANSIC">FirstInitProg</Object>
     <Object Type="File">Infrastructure.typ</Object>
     <Object Type="File">Infrastructure.var</Object>
-    <Object Type="Package" Reference="true">C:\projects\Loupe\Persist\src\Persister\Package.pkg</Object>
   </Objects>
 </Package>
