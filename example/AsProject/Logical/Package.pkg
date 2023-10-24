@@ -6,6 +6,6 @@
     <Object Type="File" Description="Global variables">Global.var</Object>
     <Object Type="Package" Description="Global libraries">Libraries</Object>
     <Object Type="Package">Infrastructure</Object>
-    <Object Type="Package" Reference="true">C:\projects\Loupe\Persist\src\Persister\Package.pkg</Object>
+    <Object Type="Package" Reference="true">..\..\src\Persister\Package.pkg</Object>
   </Objects>
 </Package>
