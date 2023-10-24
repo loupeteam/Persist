@@ -11,7 +11,7 @@
       <Parameter ID="EplNatSubnet" Value="192.168.102.0" />
     </Connector>
     <Parameter ID="ConfigurationID" Value="AsProject_ARM" />
-    <Parameter ID="PermanentPvSize" Value="64000" />
+    <Parameter ID="PermanentPvSize" Value="63000" />
     <Parameter ID="VolatileGlobalPvSize" Value="6000000" />
     <Parameter ID="TimerDeviceType" Value="SWIOTIMER" />
     <Parameter ID="Cyclic1Duration" Value="10000" />

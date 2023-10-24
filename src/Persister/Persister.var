@@ -30,6 +30,6 @@ VAR RETAIN
 	gPermAxisPars : ARRAY[0..999] OF USINT;
 	gPermAxisCfgs : ARRAY[0..1999] OF USINT;
 	gPermConfiguration : ARRAY[0..49999] OF USINT;
-	gPermMisc : ARRAY[0..9999] OF USINT;
+	gPermMisc : ARRAY[0..999] OF USINT;
 	gPermLastSavedTime : ARRAY[0..MAI_PERSISTERS] OF DATE_AND_TIME;
 END_VAR
