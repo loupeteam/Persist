@@ -1,13 +1,11 @@
-/********************************************************************
- * COPYRIGHT --  
- ********************************************************************
- * Library: Persist
+/*
  * File: PersistFn_Cyclic.c
- * Author: davidblackburn
- * Created: October 14, 2013
- ********************************************************************
- * Implementation of library Persist
- ********************************************************************/
+ * Copyright (c) 2023 Loupe
+ * https://loupe.team
+ * 
+ * This file is part of Persist, licensed under the MIT License.
+ * 
+ */
 
 #include <bur/plctypes.h>
 #ifdef __cplusplus
