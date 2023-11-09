@@ -8,6 +8,7 @@
  *********************************************************************
  * Constants of library Persist
  ********************************************************************)
+
 VAR CONSTANT
 	PERSIST_MAI_VARLIST : USINT := 99;
 	PERSIST_STRLEN_VARNAME : USINT := 120;
