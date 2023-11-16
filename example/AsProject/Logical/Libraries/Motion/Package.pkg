@@ -12,8 +12,6 @@
     <Object Type="Library" Language="binary" Description="CNC Manager">Arnc0man</Object>
     <Object Type="Library" Language="binary" Description="Smart Device Controller">Acp10sdc</Object>
     <Object Type="Library" Language="binary" Description="Motion Command Library">Arnc0mx</Object>
-    <Object Type="Library" Language="binary" Description="This mechatronics library contains lookup table function blocks.">MTLookUp</Object>
     <Object Type="Library" Language="binary" Description="Transformation Library">TRF_LIB</Object>
-    <Object Type="Library" Language="binary" Description="This mechatronics library contains basic control function blocks.">MTBasics</Object>
   </Objects>
 </Package>
