@@ -77,3 +77,7 @@
     <LibraryObject Name="errorlib" Source="Libraries.Loupe.errorlib.lby" Memory="UserROM" Language="Binary" Debugging="true" />
   </Libraries>
 </SwConfiguration>
+    <LibraryObject Name="powerlnk" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="Persist" Source="Libraries.Loupe.Persist.lby" Memory="UserROM" Language="ANSIC" Debugging="true" />
+  </Libraries>
+</SwConfiguration>

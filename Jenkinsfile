@@ -1,11 +1,13 @@
-library "jenkinsLibrary@feature/libraryBuildExpansion"
+library "jenkinsLibrary@develop"
 
 buildPublishPipeline(
-    slackChannel: "sandbox-github", 
-    asProjectRepo: "Persist",
-    asProjectVersion: "feature/persist-pkg", 
+    slackChannel: "sandbox-github",
+    asProjectRepo: "persist",
+    asProjectVersion: "main", 
     asProjectPath: "example/AsProject",
-    lpmVersion: "feature/publish-improvements",
-    skipLpmInstall: true, 
+    skipLpmInstall: true,
     packagesToPublish: ['src/Persist', 'src/Persister']
 )
+
+
+
