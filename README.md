@@ -5,10 +5,10 @@ info@loupe.team
 1-800-240-7042  
 
 # Description
-This repo provides packages that allow the implementation of the piper state machine.
+This repo allows the implementation of the persist library package and persist program package.
 
 ### Program Package
-This program package will install the Persister package that contains the PermMemory program.  This allows the manipulation of the amount of memory you can store to optimize memory use for the project. 
+This program package will install the Persister package that contains the PermMemory program.  This allows the manipulation of the amount of memory the Automation Studio project can store to optimize memory use. 
 
 ### Library Package
 Persist provides a convenient and compact way of storing variables to permanent memory. Persist can store variables and structures of any type or scope, even local variables in other programs.
