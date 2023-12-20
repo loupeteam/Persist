@@ -1,0 +1,30 @@
+(********************************************************************
+ * COPYRIGHT --  
+ ********************************************************************
+ * Program: PermMemory
+ * File: PermMemory.var
+ * Author: Josh
+ * Created: May 28, 2014
+ ********************************************************************
+ * Local variables of program PermMemory
+ ********************************************************************)
+VAR
+	backupInProgTimer : TOF;
+	permMiscBuff : ARRAY[0..9999] OF USINT;
+	permAxisCfgBuff : ARRAY[0..1999] OF USINT;
+	permConfigurationBuff : ARRAY[0..99999] OF USINT;
+	updateCheckTimer : TON;
+	i : USINT;
+	backupAll : BOOL;
+	restoreAll : BOOL;
+	Message : STRING[256] := '0';
+	VariableFinder : variableBrowser;
+	SelectedPersist : UINT := 0;
+	SelectedVariable : INT := 0;
+	VariableList : REFERENCE TO ARRAY[0..PERSIST_MAI_VARLIST] OF STRING[PERSIST_STRLEN_VARNAME];
+	PersistNames : ARRAY[0..MAI_PERSISTERS] OF STRING[80] := [NUM_PERSISTERS('')];
+	getTime : DTGetTime;
+	currentTime : DATE_AND_TIME;
+	Configuration : Configuration_typ;
+	minSaveTime : UDINT;
+END_VAR

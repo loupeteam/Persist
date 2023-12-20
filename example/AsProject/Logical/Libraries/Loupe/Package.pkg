@@ -11,6 +11,6 @@
     <Object Type="Library" Language="Binary">logthat</Object>
     <Object Type="Library" Language="Binary">errorlib</Object>
     <Object Type="Library" Language="Binary">vartools</Object>
-    <Object Type="Library" Language="ANSIC" Reference="true">C:\Projects\Loupe\Persist\src\Persist\ANSIC.lby</Object>
+    <Object Type="Library" Language="ANSIC" Reference="true">\..\..\src\Ar\Persist\ANSIC.lby</Object>
   </Objects>
 </Package>

@@ -6,7 +6,7 @@ buildPublishPipeline(
     asProjectVersion: "feature/persist-pkg", 
     asProjectPath: "example/AsProject",
     skipLpmInstall: true,
-    packagesToPublish: ['src/Persist', 'src/Persister']
+    packagesToPublish: ['src/Ar/Persist', 'src/Ar/Persister']
 )
 
 
