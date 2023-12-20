@@ -1,5 +1,6 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
+/* MTBasics 5.22.0 */
 
 #ifndef _MTBASICS_
 #define _MTBASICS_
@@ -7,16 +8,35 @@
 extern "C" 
 {
 #endif
+#ifndef _MTBasics_VERSION
+#define _MTBasics_VERSION 5.22.0
+#endif
 
 #include <bur/plctypes.h>
-
-#include <brsystem.h>
-#include <sys_lib.h>
-#include <MTTypes.h>
 
 #ifndef _BUR_PUBLIC
 #define _BUR_PUBLIC
 #endif
+#ifdef _SG3
+		#include "MTTypes.h"
+		#include "sys_lib.h"
+		#include "brsystem.h"
+#endif
+
+#ifdef _SG4
+		#include "MTTypes.h"
+		#include "sys_lib.h"
+		#include "brsystem.h"
+#endif
+
+#ifdef _SGC
+		#include "MTTypes.h"
+		#include "sys_lib.h"
+		#include "brsystem.h"
+#endif
+
+
+
 /* Constants */
 #ifdef _REPLACE_CONST
  #define mtBCD_INF_TUNING_ABORTED_BY_USER 1089471511
@@ -77,9 +97,6 @@ extern "C"
  #define mtBCD_ERR_TIME_CONSTANT2_INVALID (-1058012138)
  #define mtBCD_ERR_TIME_CONSTANT1_INVALID (-1058012139)
 #else
- #ifndef _GLOBAL_CONST
-   #define _GLOBAL_CONST _WEAK const
- #endif
  _GLOBAL_CONST signed long mtBCD_INF_TUNING_ABORTED_BY_USER;
  _GLOBAL_CONST signed long mtBCD_INF_TIME_CONSTANT2_ZERO;
  _GLOBAL_CONST signed long mtBCD_INF_TIME_CONSTANT1_ZERO;
@@ -317,6 +334,13 @@ typedef struct MTBasicsPFMInternalType
 	plcbit EnableOld;
 } MTBasicsPFMInternalType;
 
+typedef struct MTBasicsPIDParametersType
+{	double Gain;
+	double IntegrationTime;
+	double DerivativeTime;
+	double FilterTime;
+} MTBasicsPIDParametersType;
+
 typedef struct MTBasicsPIDInternalType
 {	float CycleTime;
 	plcbit ParametersValid;
@@ -327,7 +351,7 @@ typedef struct MTBasicsPIDInternalType
 	float ControlError;
 	float ControlErrorOld;
 	float Out;
-	enum MTPIDIntegrationEnum HoldIntegration;
+	MTPIDIntegrationEnum HoldIntegration;
 	float IntegrationPartPresetValue;
 	plcbit SetIntegrationPart;
 	plcbit SetIntegrationPartOld;
@@ -340,6 +364,11 @@ typedef struct MTBasicsPIDInternalType
 	unsigned long CounterOld;
 	plcbit SysRefParaNew;
 	struct MTTransferFcnType SystemReference;
+	struct MTBasicsPIDParametersType PIDParametersLREAL;
+	double PIDOutput;
+	double ProportionalPart;
+	double IntegrationPart;
+	double DerivativePart;
 } MTBasicsPIDInternalType;
 
 typedef struct MTBasicsPT1InternalType
@@ -698,7 +727,7 @@ typedef struct MTBasicsPID
 	float ActValue;
 	float IntegrationPartPresetValue;
 	float TrackingValue;
-	enum MTPIDIntegrationEnum HoldIntegration;
+	MTPIDIntegrationEnum HoldIntegration;
 	/* VAR_OUTPUT (analog) */
 	signed long StatusID;
 	float Out;
@@ -706,7 +735,7 @@ typedef struct MTBasicsPID
 	float ProportionalPart;
 	float IntegrationPart;
 	float DerivativePart;
-	enum MTPIDIntegrationEnum IntegrationStatus;
+	MTPIDIntegrationEnum IntegrationStatus;
 	unsigned long SystemReference;
 	/* VAR (analog) */
 	struct MTBasicsPIDInternalType Internal;
@@ -906,23 +935,6 @@ _BUR_PUBLIC void MTBasicsDT2(struct MTBasicsDT2* inst);
 _BUR_PUBLIC void MTBasicsIntegrator(struct MTBasicsIntegrator* inst);
 _BUR_PUBLIC void MTBasicsLevelController(struct MTBasicsLevelController* inst);
 _BUR_PUBLIC void MTBasicsLimiter(struct MTBasicsLimiter* inst);
-_BUR_PUBLIC void MTBasicsOscillationTuning(struct MTBasicsOscillationTuning* inst);
-_BUR_PUBLIC void MTBasicsPFM(struct MTBasicsPFM* inst);
-_BUR_PUBLIC void MTBasicsPID(struct MTBasicsPID* inst);
-_BUR_PUBLIC void MTBasicsPT1(struct MTBasicsPT1* inst);
-_BUR_PUBLIC void MTBasicsPT2(struct MTBasicsPT2* inst);
-_BUR_PUBLIC void MTBasicsPWM(struct MTBasicsPWM* inst);
-_BUR_PUBLIC void MTBasicsPWMSchedule(struct MTBasicsPWMSchedule* inst);
-_BUR_PUBLIC void MTBasicsStepTuning(struct MTBasicsStepTuning* inst);
-_BUR_PUBLIC void MTBasicsTimeDelay(struct MTBasicsTimeDelay* inst);
-_BUR_PUBLIC void MTBasicsTransferFcn(struct MTBasicsTransferFcn* inst);
-
-
-#ifdef __cplusplus
-};
-#endif
-#endif /* _MTBASICS_ */
-
 _BUR_PUBLIC void MTBasicsOscillationTuning(struct MTBasicsOscillationTuning* inst);
 _BUR_PUBLIC void MTBasicsPFM(struct MTBasicsPFM* inst);
 _BUR_PUBLIC void MTBasicsPID(struct MTBasicsPID* inst);

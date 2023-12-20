@@ -18,16 +18,16 @@ extern "C"
 #define _BUR_PUBLIC
 #endif
 #ifdef _SG3
-		#include "HMITools.h"
 		#include "ringbuflib.h"
+		#include "hmitools.h"
 #endif
 #ifdef _SG4
-		#include "HMITools.h"
 		#include "ringbuflib.h"
+		#include "hmitools.h"
 #endif
 #ifdef _SGC
-		#include "HMITools.h"
 		#include "ringbuflib.h"
+		#include "hmitools.h"
 #endif
 
 

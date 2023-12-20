@@ -1,3 +1,10 @@
+(********************************************************************
+ * File: Infrastructure.var
+ * Copyright (c) 2023 Loupe
+ * https://loupe.team
+ * 
+ * This file is part of FirstInitProg, licensed under the MIT License.
+ ********************************************************************)
 (*Persisters to handle memory management*)
 VAR
 	gSimulation : BOOL;
@@ -5,10 +12,6 @@ END_VAR
 (*Permanent memory chunks*)
 VAR RETAIN
 	gPermHomeData : ARRAY[0..999] OF USINT;
-END_VAR
-(*Error collector*)
-VAR
-	gErrorCollector : ErrorCollector_typ := (0);
 END_VAR
 (*Variables to handle transfers*)
 VAR

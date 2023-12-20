@@ -1,36 +1,32 @@
 {
-    "name": "@loupeteam/persistpkg",
-    "version": "0.1.0",
-    "description": "Handles loading and saving data to permanent memory",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 0"
+  "name": "@loupeteam/persistprog",
+  "version": "0.1.0",
+  "description": "This is a program package that will add the persister Program and all the dependecies to your AS project",
+  "author": "Loupe",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loupeteam/Persist.git"
+  },
+  "dependencies": {
+    "@loupeteam/csvfilelib": "^1.2.2",
+    "@loupeteam/errorlib": "^0.23.3",
+    "@loupeteam/firstinitprog": "^0.1.1",
+    "@loupeteam/messagebox": "^0.1.3",
+    "@loupeteam/vartools": "^0.11.3"
+  },
+  "lpm": {
+    "type": "program",
+    "logical": {
+      "destination": "Persister"
     },
-    "keywords": [],
-    "author": "Loupe",
-    "license": "Loupe Software License Agreement",
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/loupeteam/Persist.git"
-    },
-    "dependencies": {
-      "@loupeteam/persist": ">=0.0.6",
-      "@loupeteam/messagebox": "^0.1.3",
-      "@loupeteam/csvfilelib": "^1.2.2",
-      "@loupeteam/vartools": ">=0.11.3",
-      "@loupeteam/errorlib": "^0.23.3"
-    },
-    "lpm": {
-      "type": "package",
-      "logical": {
-        "destination": "Infrastructure/Persister"
-      },
-      "physical": {
-        "cpu": [
-          {
-            "source": "PermMemory",
-            "destination": "TC4"
-          }
-        ]
-      }
+    "physical": {
+      "cpu": [
+        {
+          "source": "PermMemory",
+          "destination": "TC8"
+        }
+      ]
     }
   }
+}

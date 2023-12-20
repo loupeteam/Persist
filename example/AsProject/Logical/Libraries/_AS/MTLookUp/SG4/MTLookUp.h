@@ -1,6 +1,6 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
-/* MTLookUp 5.19.0 */
+/* MTLookUp 5.22.0 */
 
 #ifndef _MTLOOKUP_
 #define _MTLOOKUP_
@@ -9,7 +9,7 @@ extern "C"
 {
 #endif
 #ifndef _MTLookUp_VERSION
-#define _MTLookUp_VERSION 5.19.0
+#define _MTLookUp_VERSION 5.22.0
 #endif
 
 #include <bur/plctypes.h>
