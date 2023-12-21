@@ -7,6 +7,6 @@
     <Object Type="Package" Description="Global libraries">Libraries</Object>
     <Object Type="Package">Infrastructure</Object>
     <Object Type="Package">Diagnostics</Object>
-    <Object Type="Package" Reference="true">\..\..\src\Ar\Persister\Package.pkg</Object>
+    <Object Type="Package" Reference="true">..\..\src\Ar\Persister\Package.pkg</Object>
   </Objects>
 </Package>
