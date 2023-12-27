@@ -1,3 +1,5 @@
+# Change log
+
 0.00.7 -	Increase maximum size of variable list from 50 to 100
 0.00.6 -	Changed PV_xgetadr status handling to properly handle deleted variables
 0.00.4 -	Changed memory alignment check

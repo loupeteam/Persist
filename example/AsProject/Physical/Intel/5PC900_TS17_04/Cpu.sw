@@ -2,7 +2,7 @@
 <?AutomationStudio FileVersion="4.9"?>
 <SwConfiguration CpuAddress="SL1" xmlns="http://br-automation.co.at/AS/SwConfiguration">
   <TaskClass Name="Cyclic#1">
-    <Task Name="Default" Source="Programs.Default.prg" Memory="UserROM" Language="ANSIC" Debugging="true" />
+    <Task Name="FirstInitP" Source="Infrastructure.FirstInitProg.prg" Memory="UserROM" Language="ANSIC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#2" />
   <TaskClass Name="Cyclic#3" />
@@ -10,16 +10,15 @@
   <TaskClass Name="Cyclic#5" />
   <TaskClass Name="Cyclic#6" />
   <TaskClass Name="Cyclic#7" />
-  <TaskClass Name="Cyclic#8" />
-  <DataObjects>
-    <DataObject Name="Acp10sys" Source="" Memory="UserROM" Language="Binary" />
-  </DataObjects>
+  <TaskClass Name="Cyclic#8">
+    <Task Name="RevInfo" Source="Infrastructure.RevInfo.RevInfo.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="ErrorProg" Source="Diagnostics.ErrorProg.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="PermMemory" Source="Persister.PermMemory.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+  </TaskClass>
   <Binaries>
     <BinaryObject Name="udbdef" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="TCData" Source="" Memory="SystemROM" Language="Binary" />
     <BinaryObject Name="FWRules" Source="" Memory="UserROM" Language="Binary" />
-    <BinaryObject Name="acp10cfg" Source="" Memory="UserROM" Language="Binary" />
-    <BinaryObject Name="Acp10map" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="ashwd" Source="" Memory="SystemROM" Language="Binary" />
     <BinaryObject Name="ashwac" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="User" Source="" Memory="UserROM" Language="Binary" />
@@ -58,8 +57,8 @@
     <LibraryObject Name="DataObj" Source="Libraries._AS.DataObj.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="dvframe" Source="Libraries._AS.dvframe.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="FileIO" Source="Libraries._AS.FileIO.lby" Memory="UserROM" Language="binary" Debugging="true" />
-    <LibraryObject Name="MTBasics" Source="Libraries.MTBasics.lby" Memory="UserROM" Language="binary" Debugging="true" />
-    <LibraryObject Name="MTLookUp" Source="Libraries.MTLookUp.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="MTBasics" Source="Libraries._AS.MTBasics.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="MTLookUp" Source="Libraries._AS.MTLookUp.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="MTTypes" Source="Libraries._AS.MTTypes.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="LoopConR" Source="Libraries._AS.LoopConR.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="operator" Source="Libraries._AS.operator.lby" Memory="UserROM" Language="binary" Debugging="true" />
@@ -67,17 +66,15 @@
     <LibraryObject Name="standard" Source="Libraries._AS.standard.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="sys_lib" Source="Libraries._AS.sys_lib.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="AsBrWStr" Source="Libraries._AS.AsBrWStr.lby" Memory="UserROM" Language="binary" Debugging="true" />
-    <LibraryObject Name="visapi" Source="Libraries._AS.visapi.lby" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="Acp10man" Source="Libraries.Motion.Acp10man.lby" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="Acp10par" Source="Libraries.Motion.Acp10par.lby" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="NcGlobal" Source="Libraries.Motion.NcGlobal.lby" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="Acp10sdc" Source="Libraries.Motion.Acp10sdc.lby" Memory="UserROM" Language="binary" Debugging="true" />
-    <LibraryObject Name="Acp10sim" Source="Libraries.Motion.Acp10sim.lby" Memory="UserROM" Language="binary" Debugging="true" />
-    <LibraryObject Name="Acp10_MC" Source="Libraries.Motion.Acp10_MC.lby" Memory="UserROM" Language="binary" Debugging="true" />
-    <LibraryObject Name="Arnc0man" Source="Libraries.Motion.Arnc0man.lby" Memory="UserROM" Language="binary" Debugging="true" />
-    <LibraryObject Name="Arnc0mx" Source="Libraries.Motion.Arnc0mx.lby" Memory="UserROM" Language="binary" Debugging="true" />
-    <LibraryObject Name="TRF_LIB" Source="Libraries.Motion.TRF_LIB.lby" Memory="UserROM" Language="binary" Debugging="true" />
-    <LibraryObject Name="powerlnk" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="messagebox" Source="Libraries.Loupe.messagebox.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="csvfilelib" Source="Libraries.Loupe.csvfilelib.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="fiowrap" Source="Libraries.Loupe.fiowrap.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="stringext" Source="Libraries.Loupe.stringext.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="hmitools" Source="Libraries.Loupe.hmitools.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="ringbuflib" Source="Libraries.Loupe.ringbuflib.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="logthat" Source="Libraries.Loupe.logthat.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="errorlib" Source="Libraries.Loupe.errorlib.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="vartools" Source="Libraries.Loupe.vartools.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="Persist" Source="Libraries.Loupe.Persist.lby" Memory="UserROM" Language="ANSIC" Debugging="true" />
   </Libraries>
 </SwConfiguration>

@@ -1,0 +1,19 @@
+{
+    "name": "@loupeteam/persist",
+    "version": "0.0.7",
+    "description": "Persist provides a convenient and compact way of storing variables to permanent memory.",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 0"
+    },
+    "keywords": [],
+    "author": "Loupe",
+    "license": "Loupe Software License Agreement",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/loupeteam/Persist.git"
+    },
+    "dependencies": {},
+    "lpm": {
+      "type": "library"
+    }
+  }

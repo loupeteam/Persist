@@ -1,11 +1,13 @@
-/*
+/********************************************************************
+ * COPYRIGHT --  
+ ********************************************************************
+ * Library: Persist
  * File: persistInternalBackup.c
- * Copyright (c) 2023 Loupe
- * https://loupe.team
- * 
- * This file is part of Persist, licensed under the MIT License.
- * 
- */
+ * Author: dfblackburn
+ * Created: March 24, 2015
+ ********************************************************************
+ * Implementation of library Persist
+ ********************************************************************/
 
 #include <bur/plctypes.h>
 #ifdef __cplusplus

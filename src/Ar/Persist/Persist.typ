@@ -1,11 +1,11 @@
-(*
+(********************************************************************
+ * COPYRIGHT --  
+ ********************************************************************
+ * Library: Persist
  * File: Persist.typ
- * Copyright (c) 2023 Loupe
- * https://loupe.team
- * 
- * This file is part of Persist, licensed under the MIT License.
- *
- *********************************************************************
+ * Author: davidblackburn
+ * Created: October 04, 2013
+ ********************************************************************
  * Data types of library Persist
  ********************************************************************)
 (*Public types*)

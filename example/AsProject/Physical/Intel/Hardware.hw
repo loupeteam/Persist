@@ -1,23 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?AutomationStudio Version=4.11.4.55 FileVersion="4.9"?>
+<?AutomationStudio Version=4.11.2.75 FileVersion="4.9"?>
 <Hardware xmlns="http://br-automation.co.at/AS/Hardware">
-  <Module Name="5AC901.IPLK-00" Type="5AC901.IPLK-00" Version="1.8.0.1">
+  <Module Name="5AC901.IPLK-00" Type="5AC901.IPLK-00" Version="1.7.1.0">
     <Connection Connector="SS" TargetModule="5PC910.SX02-00" TargetConnector="SS2" />
     <Connector Name="IF1">
       <Parameter ID="DNAConfiguration" Value="manual" />
     </Connector>
   </Module>
-  <Module Name="5PC900_TS17_04" Type="5PC900.TS17-04" Version="2.1.1.0">
+  <Module Name="5PC900_TS17_04" Type="5PC900.TS17-04" Version="2.1.0.0">
     <Connection Connector="SY" TargetModule="5PC910.SX02-00" TargetConnector="SY1" />
     <Parameter ID="ConfigurationID" Value="Starter_StarterConfig" />
     <Parameter ID="UserPartitionSize" Value="300" />
-    <Parameter ID="Simulation" Value="1" />
     <Parameter ID="UserRamDevice" Value="PCI.2.IPLK.SRAM" />
     <Parameter ID="UserRamSize" Value="500000" />
     <Parameter ID="RemMemDevice" Value="PCI.2.IPLK.SRAM" />
     <Parameter ID="RemMemSize" Value="120000" />
-    <Parameter ID="PermanentPvSize" Value="105000" />
-    <Parameter ID="RemanentGlobalPvSize" Value="10000" />
+    <Parameter ID="PermanentPvSize" Value="10000" />
+    <Parameter ID="RemanentGlobalPvSize" Value="105000" />
     <Parameter ID="VolatileGlobalPvSize" Value="1000000" />
     <Parameter ID="TimerDeviceType" Value="EPLX2X" />
     <Parameter ID="TimerDevice" Value="5AC901.IPLK-00.IF1" />

@@ -1,5 +1,6 @@
 /* Automation Studio generated header file */
 /* Do not edit ! */
+/* MTLookUp 5.22.0 */
 
 #ifndef _MTLOOKUP_
 #define _MTLOOKUP_
@@ -7,15 +8,32 @@
 extern "C" 
 {
 #endif
+#ifndef _MTLookUp_VERSION
+#define _MTLookUp_VERSION 5.22.0
+#endif
 
 #include <bur/plctypes.h>
-
-#include <Sys_lib.h>
-#include <brsystem.h>
 
 #ifndef _BUR_PUBLIC
 #define _BUR_PUBLIC
 #endif
+#ifdef _SG3
+		#include "sys_lib.h"
+		#include "brsystem.h"
+#endif
+
+#ifdef _SG4
+		#include "sys_lib.h"
+		#include "brsystem.h"
+#endif
+
+#ifdef _SGC
+		#include "sys_lib.h"
+		#include "brsystem.h"
+#endif
+
+
+
 /* Constants */
 #ifdef _REPLACE_CONST
  #define mtBCD_WRN_LOOKUP_MEM_ALLOC (-2131754002)
@@ -33,9 +51,6 @@ extern "C"
  #define mtBCD_ERR_XVAL_NOT_SORTED (-1058012183)
  #define mtBCD_ERR_NODES_INVALID (-1058012184)
 #else
- #ifndef _GLOBAL_CONST
-   #define _GLOBAL_CONST _WEAK const
- #endif
  _GLOBAL_CONST signed long mtBCD_WRN_LOOKUP_MEM_ALLOC;
  _GLOBAL_CONST signed long mtBCD_WRN_LOOKUP_MODE_INVALID;
  _GLOBAL_CONST signed long mtBCD_WRN_NODES_Y_INVALID;
