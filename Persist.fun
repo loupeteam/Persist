@@ -38,3 +38,9 @@ FUNCTION persistInternalRestore : UINT (*Internal: Restore from persistent memor
 		Persistence : Persistence_typ;
 	END_VAR
 END_FUNCTION
+
+FUNCTION persistUpdateMetadata : UINT
+	VAR_INPUT
+		Persistence : Persistence_typ;
+	END_VAR
+END_FUNCTION

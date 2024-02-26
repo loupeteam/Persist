@@ -22,6 +22,7 @@ TYPE
 		variableSize : UDINT;
 		lastFileBackupTime : DATE_AND_TIME;
 		dataChanged : BOOL;
+		pSelf : UDINT;
 	END_STRUCT;
 	Persistence_Int_VarInfo_typ : 	STRUCT 
 		pMetadata : REFERENCE TO Persistence_Var_Metadata;
