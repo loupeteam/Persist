@@ -8,5 +8,7 @@
   <TaskClass Name="Cyclic#6" />
   <TaskClass Name="Cyclic#7" />
   <TaskClass Name="Cyclic#8" />
-  <Libraries />
+  <Libraries>
+    <LibraryObject Name="Persist" Source="Libraries.Loupe.Persist.lby" Memory="UserROM" Language="ANSIC" Debugging="true" />
+  </Libraries>
 </SwConfiguration>
